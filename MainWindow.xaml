@@ -1,0 +1,61 @@
+﻿<Window x:Class="MessagesStats.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MessagesStats"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="0" Grid.Row="0" Name="loginButton" Width="100" Height="25" Margin="5">Войти</Button>
+
+        <Image Grid.Column="0" Grid.Row="1" Name="accountAvatarImage" Width="100" Height="100" Stretch="UniformToFill" Margin="5"></Image>
+        <Label Grid.Column="0" Grid.Row="2" Name="accountFullNameLabel" Margin="5"></Label>
+
+        <Image Grid.Column="0" Grid.Row="3" Name="userAvatarImage" Width="100" Height="100" Stretch="UniformToFill" Margin="5"></Image>
+        <Label Grid.Column="0" Grid.Row="4" Name="userFullNameLabel" Margin="5"></Label>
+
+        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Column="0" Grid.Row="0" Name="logTextBox" Margin="5" VerticalScrollBarVisibility="Auto"></TextBox>
+
+            <ProgressBar Grid.Column="0" Grid.Row="1" Name="progressBar" Height="25" Margin="5"></ProgressBar>
+            
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <TextBox Grid.Column="0" Grid.Row="0" Name="userIdTextBox" Margin="5">222775394</TextBox>
+                <Button Grid.Column="1" Grid.Row="0" Name="analyzeButton" Width="100" Height="25" Margin="5">Анализ</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
